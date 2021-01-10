@@ -27,7 +27,9 @@ function CalendarScreen() {
   const [Cheer, setCheer] = useState();
 
   const loadData = async () => {
-    const token = await AsyncStorage.getItem("token");
+    const token =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmY3MGQ0YWE3MDk3NzAwMTc3MzI2NjIiLCJpYXQiOjE2MTAyMTgyMzJ9.aSFScs4eVIZZ75zMIkO1eL134aJS_OYf4n8GKXDfTqY";
+
     var axios = require("axios");
     var config1 = {
       method: "get",
@@ -147,27 +149,25 @@ function CalendarScreen() {
                             flexDirection: "row",
                           }}
                         >
-                          <View>
+                          <View
+                            style={{
+                              flex: 1,
+                              alignItems: "center",
+                              justifyContent: "center",
+                              height: 30,
+                            }}
+                          >
                             <Text style={{ alignContent: "center" }}>
                               {item.title}
                             </Text>
-                            <View
+                            {/* <View
                               style={{ marginTop: 25, flexDirection: "row" }}
                             >
                               <Image
                                 style={{ height: 23, width: 23 }}
                                 source={require("../../../../assets/images/heart.png")}
                               />
-                              <Text
-                                style={{
-                                  marginTop: 2,
-                                  marginLeft: 10,
-                                  fontSize: 13,
-                                }}
-                              >
-                                하트 개수
-                              </Text>
-                            </View>
+                            </View> */}
                           </View>
                         </View>
                       </View>

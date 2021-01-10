@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   RefreshControl,
+  LogBox,
 } from "react-native";
 import Planitem from "../../../../Components/Planitem";
 import { connect, useSelector, shallowEqual } from "react-redux";
@@ -35,6 +36,7 @@ const wait = (timeout) => {
   });
 };
 function HomeScreen(props) {
+  LogBox.ignoreAllLogs();
   let [fontsLoaded] = useFonts({
     NotoSans: require("../../../../assets/fonts/NotoSans-Regular.ttf"),
   });

@@ -13,7 +13,8 @@ import AsyncStorage from "@react-native-community/async-storage";
 import axios from "axios";
 function DetailThemeScreen() {
   const loadToken = async () => {
-    const token = await AsyncStorage.getItem("token");
+    const token =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmY3MGQ0YWE3MDk3NzAwMTc3MzI2NjIiLCJpYXQiOjE2MTAyMTgyMzJ9.aSFScs4eVIZZ75zMIkO1eL134aJS_OYf4n8GKXDfTqY";
     var data = JSON.stringify({ title: "30분 달리기" });
 
     var config = {

@@ -20,7 +20,8 @@ function CheerUpScreen({ route, navigation }) {
 
   const [text, setText] = useState("");
   const onSubmitHandler = async (text) => {
-    const token = await AsyncStorage.getItem("token");
+    const token =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmY3MGQ0YWE3MDk3NzAwMTc3MzI2NjIiLCJpYXQiOjE2MTAyMTgyMzJ9.aSFScs4eVIZZ75zMIkO1eL134aJS_OYf4n8GKXDfTqY";
     var axios = require("axios");
     var data = JSON.stringify({ userId: userId, message: text });
 
