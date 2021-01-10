@@ -72,7 +72,6 @@ const MapScreens = (props) => {
             _id: "5ff70d4aa709770017732662", // 추후에 변경해야함.
           });
           socket.on("user", (FetchedArr) => {
-            console.log("FetchedARr : ", FetchedArr);
             setLocation({
               markers: FetchedArr, //  친구들 위치.
               region: {

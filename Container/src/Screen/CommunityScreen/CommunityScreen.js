@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
 import { ScrollView } from "react-native-gesture-handler";
+import FadeInView from '../../../../Components/FadeInView';
 
 function CommunityScreen() {
   const [Data, setData] = useState();
@@ -79,7 +80,7 @@ function CommunityScreen() {
       );
     } else {
       return (
-        <>
+        <FadeInView>
           <View style={{ marginHorizontal: 20, marginTop: 10 }}>
             <View style={{ flexDirection: "row" }}>
               <Image
@@ -123,9 +124,9 @@ function CommunityScreen() {
               width: "100%",
               height: 5,
               backgroundColor: "#D8D8D8",
-            }}
-          ></View>
-        </>
+            }}>
+          </View>
+        </FadeInView>
       );
     }
   };

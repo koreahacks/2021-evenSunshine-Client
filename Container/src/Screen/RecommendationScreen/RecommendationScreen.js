@@ -15,6 +15,7 @@ import RecentScreen from "./Sections/RecentScreen";
 
 import POPDATA from "./Sections/PopularData";
 import DATA from "./Sections/ThemeData";
+import FadeInView from '../../../../Components/FadeInView';
 
 function RecommendationScreen(props) {
   const popPlan = ({ item }) => {
@@ -99,7 +100,7 @@ function RecommendationScreen(props) {
     );
   };
   return (
-    <>
+    <FadeInView>
       <View style={{ backgroundColor: "white", alignItems: "center" }}>
         <View style={{ alignItems: "center", backgroundColor: "white" }}>
           <Image
@@ -176,7 +177,7 @@ function RecommendationScreen(props) {
           </View>
         </ScrollView>
       </View>
-    </>
+    </FadeInView>
   );
 }
 

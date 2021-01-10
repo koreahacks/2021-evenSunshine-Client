@@ -11,7 +11,6 @@ const token =
 // CardItem => 내 주변에 있는 사람들 
 const CardItem = ({ marker, isFollowing, navigation }) => {
     const [Following, setFollowing] = useState(isFollowing); //소켓에서 받아온 isFollowing을 맨 처음에 Hook에 적용.
-    console.log('following : ', isFollowing);
     
     const followBtnClickHandler = async (userId) => {
         setFollowing(true) // 팔로우 버튼 누른 상태.
