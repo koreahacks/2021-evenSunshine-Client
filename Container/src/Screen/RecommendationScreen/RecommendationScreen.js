@@ -100,7 +100,7 @@ function RecommendationScreen(props) {
     );
   };
   return (
-    <FadeInView>
+    <FadeInView duration={1000}>
       <View style={{ backgroundColor: "white", alignItems: "center" }}>
         <View style={{ alignItems: "center", backgroundColor: "white" }}>
           <Image
@@ -142,12 +142,14 @@ function RecommendationScreen(props) {
                 인기 목표
               </Text>
               <View style={{ marginHorizontal: 5 }}>
-                <FlatList
-                  data={POPDATA}
-                  renderItem={popPlan}
-                  keyExtractor={(item) => item.id}
-                  horizontal={true}
-                />
+                <FadeInView duration={2000}>
+                  <FlatList
+                    data={POPDATA}
+                    renderItem={popPlan}
+                    keyExtractor={(item) => item.id}
+                    horizontal={true}
+                  />
+                </FadeInView>
               </View>
               <View
                 style={{

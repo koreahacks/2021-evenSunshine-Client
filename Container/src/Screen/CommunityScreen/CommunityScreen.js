@@ -145,35 +145,36 @@ function CommunityScreen() {
         />
       </View>
 
-      <ScrollView>
-        <View style={{ paddingBottom: 100 }}>
-          <View
-            style={{
-              width: "100%",
-              height: 5,
-              backgroundColor: "#D8D8D8",
-              marginTop: 7,
-            }}
-          ></View>
-          <Text
-            style={{
-              fontSize: 20,
-              fontWeight: "bold",
-              margin: 20,
-              marginHorizontal: 40,
-              marginBottom: 35,
-            }}
-          >
-            목표 후기
-          </Text>
-
-          <FlatList
-            data={Data}
-            renderItem={Item}
-            keyExtractor={(item) => item._id}
-          />
-        </View>
-      </ScrollView>
+      <FadeInView>
+        <ScrollView>
+          <View style={{ paddingBottom: 100 }}>
+            <View
+              style={{
+                width: "100%",
+                height: 5,
+                backgroundColor: "#D8D8D8",
+                marginTop: 7,
+              }}
+            ></View>
+            <Text
+              style={{
+                fontSize: 20,
+                fontWeight: "bold",
+                margin: 20,
+                marginHorizontal: 40,
+                marginBottom: 35,
+              }}
+            >
+              목표 후기
+            </Text>
+            <FlatList
+              data={Data}
+              renderItem={Item}
+              keyExtractor={(item) => item._id}
+            />
+          </View>
+        </ScrollView>
+      </FadeInView>
     </View>
   );
 }

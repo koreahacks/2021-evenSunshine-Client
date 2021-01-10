@@ -130,48 +130,50 @@ function CalendarScreen() {
                     const subdate = d.substring(0, 10);
                     if (subdate === selectedDay) {
                       return (
-                        <View
-                          key={index}
-                          style={{ flex: 1, alignItems: "center" }}
-                        >
+                        <FadeInView>
                           <View
-                            style={{
-                              backgroundColor: "white",
-                              padding: 10,
-                              margin: 6,
-                              borderRadius: 10,
-                              width: 330,
-                              shadowOffset: {
-                                width: 0,
-                                height: 2,
-                              },
-                              shadowOpacity: 0.25,
-                              shadowRadius: 3,
-                              flexDirection: "row",
-                            }}
+                            key={index}
+                            style={{ flex: 1, alignItems: "center" }}
                           >
                             <View
                               style={{
-                                flex: 1,
-                                alignItems: "center",
-                                justifyContent: "center",
-                                height: 30,
+                                backgroundColor: "white",
+                                padding: 10,
+                                margin: 6,
+                                borderRadius: 10,
+                                width: 330,
+                                shadowOffset: {
+                                  width: 0,
+                                  height: 2,
+                                },
+                                shadowOpacity: 0.25,
+                                shadowRadius: 3,
+                                flexDirection: "row",
                               }}
                             >
-                              <Text style={{ alignContent: "center" }}>
-                                {item.title}
-                              </Text>
-                              {/* <View
-                                style={{ marginTop: 25, flexDirection: "row" }}
+                              <View
+                                style={{
+                                  flex: 1,
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  height: 30,
+                                }}
                               >
-                                <Image
-                                  style={{ height: 23, width: 23 }}
-                                  source={require("../../../../assets/images/heart.png")}
-                                />
-                              </View> */}
+                                <Text style={{ alignContent: "center" }}>
+                                  {item.title}
+                                </Text>
+                                {/* <View
+                                  style={{ marginTop: 25, flexDirection: "row" }}
+                                >
+                                  <Image
+                                    style={{ height: 23, width: 23 }}
+                                    source={require("../../../../assets/images/heart.png")}
+                                  />
+                                </View> */}
+                              </View>
                             </View>
                           </View>
-                        </View>
+                        </FadeInView>
                       );
                     }
                   })}
@@ -180,38 +182,40 @@ function CalendarScreen() {
                     내가 받은 응원
                   </Text>
                   {Cheer.map((item, index) => (
-                    <View key={index} style={{ flex: 1, alignItems: "center" }}>
-                      <View style={{ flexDirection: "row", margin: 10 }}>
-                        <Image
-                          // source={item.cheer.image}
-                          source={require("../../../../assets/images/dochi.jpg")}
-                          style={{
-                            width: 50,
-                            height: 50,
-                            borderRadius: 25,
-                            marginRight: 20,
-                          }}
-                        />
-                        <View
-                          style={{
-                            height: 50,
-                            backgroundColor: "white",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            width: 250,
-                            borderRadius: 10,
-                            shadowOffset: {
-                              width: 0,
-                              height: 2,
-                            },
-                            shadowOpacity: 0.25,
-                            shadowRadius: 3,
-                          }}
-                        >
-                          <Text style={{}}>{item.cheer.message}</Text>
+                    <FadeInView>
+                      <View key={index} style={{ flex: 1, alignItems: "center" }}>
+                        <View style={{ flexDirection: "row", margin: 10 }}>
+                          <Image
+                            // source={item.cheer.image}
+                            source={require("../../../../assets/images/dochi.jpg")}
+                            style={{
+                              width: 50,
+                              height: 50,
+                              borderRadius: 25,
+                              marginRight: 20,
+                            }}
+                          />
+                          <View
+                            style={{
+                              height: 50,
+                              backgroundColor: "white",
+                              justifyContent: "center",
+                              alignItems: "center",
+                              width: 250,
+                              borderRadius: 10,
+                              shadowOffset: {
+                                width: 0,
+                                height: 2,
+                              },
+                              shadowOpacity: 0.25,
+                              shadowRadius: 3,
+                            }}
+                          >
+                            <Text style={{}}>{item.cheer.message}</Text>
+                          </View>
                         </View>
                       </View>
-                    </View>
+                    </FadeInView>
                   ))}
                 </View>
               </View>
